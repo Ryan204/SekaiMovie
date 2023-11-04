@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+* {
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+:root {
+    --main-color: orange;
+    --hover-color: hsl(37, 97%,57%);
+    --body-color: #1e1e2a;
+    --container-color: #2d2e36;
+    --text-color: #fcfeff;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: var(--body-color);
+}
+
+form {
+    background: var(--container-color);
+    padding: 60px 80px 60px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+}
+
+form h2 {
+    color: var(--text-color);
+    font-weight: 500;
+    text-transform: uppercase;
+    font-size: 1.25em;
+    letter-spacing: 0.1em;
+    margin-bottom: 50px;
+}
+
+.inputbox {
+    position: relative;
+    width: 300px;
+    margin-bottom: 40px;
+}
+
+.inputbox input {
+    position: relative;
+    width: 100%;
+    padding: 10px 0;
+    background: transparent;
+    border: none;
+    border-bottom: 2px solid #999;
+    outline: none;
+    color: var(--text-color);
+    font-size: 1em;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+}
+
+.inputbox label {
+    position: absolute;
+    left: 0;
+    padding: 10px 0;
+    pointer-events: none;
+    color: #999;
+    text-transform: uppercase;
+}
+
+.inputbox label span {
+    position: relative;
+    display: inline-flex;
+    letter-spacing: 0.05em;
+    transition: 0.2s ease-in-out;
+}
+
+.inputbox input:focus ~ label span,
+.inputbox input:valid ~ label span {
+    color: hsl(37, 97%,57%);
+    letter-spacing: 0.15em;
+    transform: translateY(-25px);
+}
+
+.inputbox input:focus,
+.inputbox input:valid {
+    border-bottom: 2px solid hsl(37, 97%,57%);
+}
+
+.inputbox input[type="submit"] {
+    background: hsl(37, 97%,57%);
+    border: none;
+    padding: 15px;
+    border-radius: 50px;
+    color: #1c2630;
+    font-weight: 600;
+    font-size: 1.15em;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    cursor: pointer;
+    transform: 0.5s;
+}
+
+.inputbox input[type="submit"]:hover {
+    letter-spacing: 0.30em;
+    transition: 0.3s;
+}
+
+form p {
+    color: #fff;
+    text-transform: uppercase;
+}
+form p a {
+    color: hsl(37, 97%,57%);
+    font-weight: 500;
+    text-decoration: none;
+}
+

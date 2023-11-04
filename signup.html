@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- link css -->
+    <link rel="stylesheet" href="css/signup.css">
+    <title>Sign-Up</title>
+</head>
+<body>
+    
+    <form action="login.html">
+        <h2>Buat Akun</h2>
+        <div class="inputbox">
+            <input type="text" required>
+            <label>Username</label>
+        </div>
+        <div class="inputbox">
+            <input type="text" required>
+            <label>Email</label>
+        </div>
+        <div class="inputbox">
+            <input type="password" required>
+            <label>Buat &nbsp Password</label>
+        </div>
+        <div class="inputbox">
+            <input type="password" required>
+            <label>Konfirmasi &nbsp Password</label>
+        </div>
+        <div class="inputbox">
+            <input type="submit" value="Buat Akun">
+        </div>
+        <p>Sudah Punya Akun? <a href="login.html">Login</a> </p>
+    </form>
+
+    <script>
+        let label = document.querySelectorAll('label').forEach(label => {
+            label.innerHTML = label.innerText.split('').map
+            ((letters, i) => `<span style="transition-delay: ${i * 50}ms">${letters}</span>`).join('');
+        })
+    </script>
+
+</body>
+</html>
